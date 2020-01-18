@@ -54,12 +54,60 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,0%);
+	transform: translate(-50%,-50%);
 	transition: 1s all;
 	border-bottom: 0px solid #279e5c;
 }
 .btn1:hover{
 	border-bottom: 8px solid #279e5c;
-	transform: translate(-50%,-8px);
+	transform: translate(-50%, calc(-50% - 8px));
 
+}
+.btn1:active{
+	border-bottom: 0px solid #279e5c;
+	background: red;
+	transform: translate(-50%, -50%);
+}
+.btn2{
+	display: inline-block;
+	color: #000;
+	font-family: "微軟正黑體";
+	text-decoration: none;
+	font-size: 32px;
+	line-height: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: .3 all;
+}
+.btn2:hover{
+	color: red;
+}
+.btn2:before{
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 5px;
+	background: #000;
+	transition: .3s all;
+}
+.btn2:after{
+	content: "";
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 5px;
+	background: #000;
+	transition: .3s all;
+}
+.btn2:hover:before,
+.btn2:hover:after {
+	width: 100%;
+	background: red;
 }

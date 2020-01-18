@@ -21,10 +21,18 @@
 
 		<!-- Button-2 -->
 		<div class="section section3">
-			<a href="#" class="btn2">This is a link</a>
+			<a href="#" class="btn2" onclick="myfunction()">This is a link</a>
 		</div>
 		<!-- Button-3 -->
 		
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script>
+function myfunction(){
+	$(".section3").css("background-color", "pink");
+}
+</script>
 </html>
